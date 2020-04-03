@@ -23,9 +23,9 @@
 */
 
 function bubbleSort(arr) {
-  var len = arr.length;
-  for (var i = 0; i < len - 1; i++) {
-    for (var j = 0; j < len - 1 - i; j++) {
+  let len = arr.length;
+  for (let i = 0; i < len - 1; i++) {
+    for (let j = 0; j < len - 1 - i; j++) {
       if (arr[j] > arr[j + 1]) {
         // 相邻元素两两对比
         // var temp = arr[j + 1]; // 元素交换
@@ -38,3 +38,5 @@ function bubbleSort(arr) {
   }
   return arr;
 }
+
+// bubbleSort([1, 5, 3, 6, 77, 6, 888, 765, 354, 34]);
