@@ -13,7 +13,7 @@
 /* 
 再解析：假设len等于8
   1.len-1为7，i在执行最后一次循环的时候为6
-  2.j为i+1，j在循环中最小值为1，最大值为8，但是最终j不参与循环的时候，等于9
+  2.j为i+1，j在循环中最小值为1，最大值为7
   3.排序的方向是找到最小的数，存放到起始位置
   4.再从剩余未排序元素中继续寻找最小元素，然后放到已排序序列的末尾。
 */
@@ -26,13 +26,14 @@ function selectionSort(arr) {
   for (let i = 0; i < len - 1; i++) {
     minIndex = i;
     // 为什么i+1?
+    // console.log(i);
     for (let j = i + 1; j < len; j++) {
       if (arr[j] < arr[minIndex]) {
         // 寻找最小的数
         // 将最小数的索引保存
         minIndex = j;
       }
-      console.log("for内", j);
+      // console.log(j);
     }
 
     // temp = arr[i];
@@ -44,4 +45,4 @@ function selectionSort(arr) {
   return arr;
 }
 
-// selectionSort([1, 5, 3, 6, 77, 6, 888, 765, 354, 34]);
+// selectionSort([1, 5, 3, 6, 77, 6, 888, 765]);
