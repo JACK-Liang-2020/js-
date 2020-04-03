@@ -58,10 +58,10 @@ VM11123:12 while 3
  *     arr[1] = 5,原数组不变
  *
  * for i=2 -> preIndex = 1,crrent = 3 , 
- *   while arr[1] > arr[2] -> 5>3 yes ->
- *      arr[2] = arr[1] =》 arr[2] = 5  => 原数组 [1,5,5,6,77]
- *      preIndex = 0 但是 arr[0] > arr[2] -> 1>5 not =》退出while时 原数组为[1,5,5,6,77]
- *   arr[1] = 3 => 原数组为 [1,3,5,6,77]
+ *     while arr[1] > arr[2] -> 5>3 yes ->
+ *        arr[2] = arr[1] =》 arr[2] = 5  => 原数组 [1,5,5,6,77]
+ *        preIndex = 0 但是 arr[0] > arr[2] -> 1>5 not =》退出while时 原数组为[1,5,5,6,77]
+ *     arr[1] = 3 => 原数组为 [1,3,5,6,77]
  *
  * for i=3 -> preIndex = 2,crrent = arr[3] , while arr[3] > arr[2] not ->
  *
