@@ -54,7 +54,7 @@ VM11123:12 while 3
  * len = 5
  *
  * for i=1 -> preIndex = 0,crrent = 5 , while arr[0] > arr[1] -> 1>5 not ->
- *  arr[1] = 5,原数组不变
+ * arr[1] = 5,原数组不变
  *
  * for i=2 -> preIndex = 1,crrent = 3 , while arr[1] > arr[2] -> 5>3 yes ->
  *   arr[2] = arr[1] =》 arr[2] = 5  => 原数组 [1,5,5,6,77]
