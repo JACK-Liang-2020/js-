@@ -25,20 +25,43 @@ function insertionSort(arr) {
   for (let i = 1; i < len; i++) {
     preIndex = i - 1;
     current = arr[i];
-    // 如果 之前 比 当前 大 进入循环
     while (preIndex >= 0 && arr[preIndex] > current) {
-      // 把 之前 赋值给 当前
       arr[preIndex + 1] = arr[preIndex];
-      // 再往前检查
       preIndex--;
+      //   console.log("while", preIndex);
     }
-    /*
-     没进入循环 当前 等于 自己
-     进入循环 
-    */
+    // console.log("while", preIndex);
     arr[preIndex + 1] = current;
   }
   return arr;
 }
 
-// insertionSort([1, 5, 3, 6, 77, 6, 888, 765, 354, 34]);
+insertionSort([1, 5, 3, 6, 77]);
+
+/*
+VM11123:12 while 0
+VM11123:10 while 0
+VM11123:12 while 0
+VM11123:12 while 2
+VM11123:12 while 3
+*/
+
+/**
+ * // 模拟运行
+ *  index:         0  1  2  3  4
+ *  insertionSort([1, 5, 3, 6, 77]);
+ *
+ * len = 5
+ *
+ * for i=1 -> preIndex = 0,crrent = 5 , while arr[0] > arr[1] -> 1>5 not ->
+ *  arr[1] = 5,原数组不变
+ *
+ * for i=2 -> preIndex = 1,crrent = 3 , while arr[1] > arr[2] -> 5>3 yes ->
+ *   arr[2] = arr[1] =》 arr[2] = 5  => 原数组 [1,5,5,6,77]
+ *   preIndex = 0 但是 arr[0] > arr[2] -> 1>5 not =》退出while时 原数组为[1,5,5,6,77]
+ * arr[1] = 3 => 原数组为 [1,3,5,6,77]
+ *
+ * for i=3 -> preIndex = 2,crrent = arr[3] , while arr[3] > arr[2] not ->
+ *
+ *
+ */
