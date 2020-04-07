@@ -16,7 +16,7 @@
 /* 
 再解析：假设len等于8
     1.preIndex 从 0 开始，while的循环次数 会随 preIndex 增大 而增多
-    2.while循环体 ：
+    2.while循环体 ：如果前一位大于后一位，则把后一位的值赋给前一位
 */
 
 function insertionSort(arr) {
@@ -57,7 +57,7 @@ VM11123:12 while 3
  *     while arr[0] > arr[1] -> 1>5 not ->
  *     arr[1] = 5,原数组不变
  *
- * for i=2 -> preIndex = 1,crrent = 3 , 
+ * for i=2 -> preIndex = 1,crrent = 3 ,
  *     while arr[1] > arr[2] -> 5>3 yes ->
  *        arr[2] = arr[1] =》 arr[2] = 5  => 原数组 [1,5,5,6,77]
  *        preIndex = 0 但是 arr[0] > arr[2] -> 1>5 not =》退出while时 原数组为[1,5,5,6,77]
