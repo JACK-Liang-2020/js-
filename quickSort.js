@@ -21,6 +21,10 @@
 虽然一直递归下去，但是这个算法总会退出，因为在每次的迭代（iteration）中，它至少会把一个元素摆到它最后的位置去。
 */
 
+/*
+参考资料：https://www.cnblogs.com/aademeng/articles/11130384.html
+*/
+
 // 第一种
 function quickSort(arr, left, right) {
   var len = arr.length,
